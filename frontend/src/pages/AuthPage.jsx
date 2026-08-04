@@ -19,4 +19,4 @@ function AuthPage() {
     </div>
   );
 }
-export default AuthPage; 
+export default AuthPage;
