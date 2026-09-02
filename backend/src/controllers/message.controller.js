@@ -5,9 +5,9 @@ import { getReceiverSocketId, io } from "../lib/socket.js";
 
 export async function getUsersForSidebar(req, res) {
     try {
-        const loggedInUser = req.user._id
+        const loggedInUser = req.user._id;
 
-        const filteredUsers = await User.find({_id: { $ne: loggedInUser } }).select("-clerkId")
+        const filteredUsers = await User.find({_id: { $ne: loggedInUser } }).select("-clerkId");
 
         res.status(200).json(filteredUsers);
 
